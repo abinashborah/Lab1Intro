@@ -1,0 +1,14 @@
+Package: Lab1Intro
+Type: Package
+Title: Lab1Intro
+Version: 0.1.0
+Author: Abinash Borah
+Maintainer: Abinash Borah <abinashborah@ou.edu>
+Description: Package contains functions to create from a data array X:
+            i. the sample mean vector
+            ii. the sample (biased) covariance matrix
+            iii. the sample correlation matrix
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
