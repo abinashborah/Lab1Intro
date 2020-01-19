@@ -9,5 +9,5 @@
 #'
 #' @examples
 mean_vector=function(X){
-
+X^2
 }
