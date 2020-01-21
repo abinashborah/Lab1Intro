@@ -9,7 +9,7 @@
 #'
 #' @examples
 #' X = [1 2 3
-#'     4 5 6]; covariance_matrix(X)
+#'      4 5 6]; covariance_matrix(X)
 #'
 covariance_matrix = function(X) {
 

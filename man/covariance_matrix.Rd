@@ -17,6 +17,6 @@ Takes a data array and returns the sample (biased) covariance matrix
 }
 \examples{
 X = [1 2 3
-    4 5 6]; covariance_matrix(X)
+     4 5 6]; covariance_matrix(X)
 
 }
