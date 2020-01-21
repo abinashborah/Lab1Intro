@@ -14,3 +14,7 @@ LazyData: true
 RoxygenNote: 7.0.2
 URL: https://github.com/abinashborah/Lab1Intro
 BugReports: https://github.com/abinashborah/Lab1Intro/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
