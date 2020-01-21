@@ -10,8 +10,13 @@ mean_vector(X)
 \item{X}{}
 }
 \value{
-a vector
+a vector (the mean vector of X)
 }
 \description{
-Mean vector function
+Takes a data array and returns the sample mean vector
+}
+\examples{
+X = [1 2 3
+     4 5 6]; mean_vector(X)
+
 }
