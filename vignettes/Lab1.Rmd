@@ -1,5 +1,6 @@
 ---
 title: "Lab1"
+author: "Abinash Borah"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Lab1}
