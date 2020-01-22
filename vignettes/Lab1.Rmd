@@ -14,7 +14,71 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+## Creating a package in R
+A package is a  fundamental unit of reproducible R code which include reusable R functions along with their documentation and sample data. 
 
+Documentation about package making in R can be found at <https://r-pkgs.org/>
+
+## About this exercise
+In this Lab1 exercise, I have created an R package "Lab1Intro" that contains three functions to create from a data array X:
+
+1. the sample mean vector : mean_vector(X)
+1. the sample (biased) covariance matrix : covariance_matrix(X) 
+1. the sample correlation matrix : correlation_matrix(X)
+
+My package is available at the github repository <https://github.com/abinashborah/Lab1Intro>
+
+## Following formulae are used in calculating the above quantities:
+
+$$\overline{x}_k = \frac{1}{n}\sum_{j=1}^{n} x_{jk}\hspace{1cm}k = 1, 2,...,p$$
+
+
+$${s}_{ik} = \frac{1}{n}\sum_{j=1}^{n} (x_{ji}-\overline{x}_i)(x_{jk}-\overline{x}_k)
+\hspace{1cm}i = 1, 2,...,p,\hspace{0.5cm}k = 1, 2,...,p$$
+
+
+$${r}_{ik} = \frac{{s}_{ik}}{{\sqrt{{s}_{ii}}}{\sqrt{{s}_{kk}}}} = \frac{\sum_{j=1}^{n} (x_{ji}-\overline{x}_i)(x_{jk}-\overline{x}_k)}
+{\sqrt{\sum_{j=1}^{n}(x_{ji}-\overline{x}_i)^2}\sqrt{\sum_{j=1}^{n}(x_{jk}-\overline{x}_k)^2}}
+\hspace{1cm}i = 1, 2,...,p,\hspace{0.5cm}k = 1, 2,...,p$$
+
+
+$$\textbf{S} = \frac{1}{n-1}\textbf{X}^/\left(\textbf{I} - \frac{1}{n}\textbf{11}^/\right)\textbf{X}$$
+
+$$\textbf{R} = \textbf{D}^{{-1}/{2}}\textbf{S}\textbf{D}^{{-1}/{2}}$$
+
+\usepackage{amsmath}
+
+$$\textbf{D}^{1/2} = \begin{bmatrix}
+\sqrt{s_{11}} & 0 & \cdots & 0 \\
+0 & \sqrt{s_{22}} & \cdots & 0 \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+0 & 0 & \cdots & \sqrt{s_{pp}} 
+\end{bmatrix}$$
+
+## A demonstration of the package is shown below:
 ```{r setup}
+# Loading the package
 library(Lab1Intro)
+
+# Loading the data from the file 'data.Rdata' to the data array 'mydata' 
+mydata=get(load("D:/MATH5793/Lab1Intro/data.Rdata"))
+
+# Showing the first few rows of the data array
+head(mydata)
+
+# Finding the mean vector for the data array using the function mean_vector()
+Lab1Intro::mean_vector(mydata)
+
+# Finding the covariance matrix for the data array using the function covariance_matrix()
+Lab1Intro::covariance_matrix(mydata)
+
+# Finding the correlation matrix for the data array using the function correlation_matrix()
+Lab1Intro::correlation_matrix(mydata)
 ```
+#### Assessment for this course MATH 5793 is as follows:
+1. Clicker quiz, each class and lab (Total 10%)
+1. 4 assignments (Total 20%)
+1. Laboratories (Total 10%)
+1. 2 Mid-term exams (10% each, Total 20%)
+1. 3 Projects (More weighting on third project, Total 10%) 
+1. 1 Final exam (30%)
