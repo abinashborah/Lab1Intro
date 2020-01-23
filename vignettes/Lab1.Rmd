@@ -44,8 +44,6 @@ $${r}_{ik} = \frac{{s}_{ik}}{{\sqrt{{s}_{ii}}}{\sqrt{{s}_{kk}}}} = \frac{\sum_{j
 
 $$\textbf{S} = \frac{1}{n-1}\textbf{X}^/\left(\textbf{I} - \frac{1}{n}\textbf{11}^/\right)\textbf{X}$$
 
-$$\textbf{R} = \textbf{D}^{{-1}/{2}}\textbf{S}\textbf{D}^{{-1}/{2}}$$
-
 \usepackage{amsmath}
 
 $$\textbf{D}^{1/2} = \begin{bmatrix}
@@ -55,25 +53,24 @@ $$\textbf{D}^{1/2} = \begin{bmatrix}
 0 & 0 & \cdots & \sqrt{s_{pp}} 
 \end{bmatrix}$$
 
+$$\textbf{R} = \textbf{D}^{{-1}/{2}}\textbf{S}\textbf{D}^{{-1}/{2}}$$
+
 ## A demonstration of the package is shown below:
 ```{r setup}
 # Loading the package
 library(Lab1Intro)
 
-# Loading the data from the file 'data.Rdata' to the data array 'mydata' 
-mydata=get(load("D:/MATH5793/Lab1Intro/data.Rdata"))
-
-# Showing the first few rows of the data array
-head(mydata)
+# Loading the data from the file 'T1-2.DAT' to the data array 'data' 
+data = read.delim("D:/MATH5793/Lab1Intro/T1-2.DAT",sep = "",header = FALSE)
 
 # Finding the mean vector for the data array using the function mean_vector()
-Lab1Intro::mean_vector(mydata)
+Lab1Intro::mean_vector(data)
 
 # Finding the covariance matrix for the data array using the function covariance_matrix()
-Lab1Intro::covariance_matrix(mydata)
+Lab1Intro::covariance_matrix(data)
 
 # Finding the correlation matrix for the data array using the function correlation_matrix()
-Lab1Intro::correlation_matrix(mydata)
+Lab1Intro::correlation_matrix(data)
 ```
 #### Assessment for this course MATH 5793 is as follows:
 1. Clicker quiz, each class and lab (Total 10%)
