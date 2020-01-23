@@ -61,17 +61,17 @@ $$\textbf{R} = \textbf{D}^{{-1}/{2}}\textbf{S}\textbf{D}^{{-1}/{2}}$$
 # Loading the package
 library(Lab1Intro)
 
-# Loading the data from the file 'T1-2.DAT' to the data array 'data' 
-data = read.delim("D:/MATH5793/Lab1Intro/T1-2.DAT",sep = "",header = FALSE)
+# Loading the data
+data("T1_2")
 
 # Finding the mean vector for the data array using the function mean_vector()
-Lab1Intro::mean_vector(data)
+Lab1Intro::mean_vector(T1_2)
 
 # Finding the covariance matrix for the data array using the function covariance_matrix()
-Lab1Intro::covariance_matrix(data)
+Lab1Intro::covariance_matrix(T1_2)
 
 # Finding the correlation matrix for the data array using the function correlation_matrix()
-Lab1Intro::correlation_matrix(data)
+Lab1Intro::correlation_matrix(T1_2)
 ```
 
 #### Assessment for this course MATH 5793 is as follows:
