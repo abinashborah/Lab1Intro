@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
 ## Creating a package in R
 A package is a  fundamental unit of reproducible R code which include reusable R functions along with their documentation and sample data. 
 
@@ -72,6 +73,7 @@ Lab1Intro::covariance_matrix(data)
 # Finding the correlation matrix for the data array using the function correlation_matrix()
 Lab1Intro::correlation_matrix(data)
 ```
+
 #### Assessment for this course MATH 5793 is as follows:
 1. Clicker quiz, each class and lab (Total 10%)
 1. 4 assignments (Total 20%)
